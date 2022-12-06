@@ -1,5 +1,15 @@
 public abstract class Price {
     public abstract int getPriceCode();
+    public abstract double getCharge(int daysRented);
+
+    public int getFrequentRenterPoints(int daysRented) {
+        int result = 0;
+        Enumeration rentals = _rentals.elements();
+        while (rentals.hasMoreElements()) {
+            Rental each = (Rental) rentals.nextElement();
+            result += each.getFrequentRenterPoints();
+    }
+     }
 
     public double getCharge(int daysRented) {
         switch (each.getMovie().getPriceCode()) {
