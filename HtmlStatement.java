@@ -1,3 +1,4 @@
+
 public class HtmlStatement
    public String value(Customer aCustomer) {
       Enumeration rentals = aCustomer.getRentals();
@@ -9,11 +10,12 @@ public class HtmlStatement
          result += each.getMovie().getTitle()+ ": " +
          String.valueOf(each.getCharge()) + "<BR>\n";
       }
-      //add footer lines
+     
       result += "<P>You owe <EM>" +
       String.valueOf(aCustomer.getTotalCharge()) + "</EM><P>\n";
       result += "On this rental you earned <EM>" + 
       String.valueOf(aCustomer.getTotalFrequentRenterPoints()) +
       "</EM> frequent renter points<P>";
       return result;
+
    }
