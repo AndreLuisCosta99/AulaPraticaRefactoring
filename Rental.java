@@ -22,11 +22,6 @@ public class Rental {
       }
 
    public int getFrequentRenterPoints() { 
-      int result = 0;
-      Enumeration rentals = _rentals.elements();
-      while (rentals.hasMoreElements()) {
-         Rental each = (Rental) rentals.nextElement();
-         result += each.getFrequentRenterPoints();
-      }
+      return _movie.getFrequentRenterPoints(_daysRented);
    }
 }

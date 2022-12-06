@@ -40,4 +40,13 @@ public class Movie {
               thisAmount += (each.getDaysRented() - 3) * 1.5;
             break;
 }
+public int getFrequentRenterPoints(int daysRented){
+    int result = 0;
+    Enumeration rentals = _rentals.elements();
+    while (rentals.hasMoreElements()) {
+        Rental each = (Rental) rentals.nextElement();
+        result += each.getFrequentRenterPoints();
+}
+}
+
 }
