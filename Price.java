@@ -3,12 +3,7 @@ public abstract class Price {
     public abstract double getCharge(int daysRented);
 
     public int getFrequentRenterPoints(int daysRented) {
-        int result = 0;
-        Enumeration rentals = _rentals.elements();
-        while (rentals.hasMoreElements()) {
-            Rental each = (Rental) rentals.nextElement();
-            result += each.getFrequentRenterPoints();
-    }
+        return 1;
      }
 
     public double getCharge(int daysRented) {
