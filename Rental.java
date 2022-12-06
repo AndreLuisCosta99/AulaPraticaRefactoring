@@ -34,4 +34,8 @@ public class Rental {
              break;
       }
   }
+
+   public int getFrequentRenterPoints() { 
+      //Adicionar o trecho de código extraído.
+   }
 }
